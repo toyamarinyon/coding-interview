@@ -270,3 +270,14 @@ curl -X DELETE http://127.0.0.1:8000/api/categories/<category_id>/
 - 認証なしの内部利用 API として運用する
 - `Company` 単位の認証・認可を導入し、所属 Company のカテゴリのみ操作可能にする
 - API Token ベースの認証を導入し、トークンに紐づく権限でアクセス可能リソースを制御する
+
+### 7. CI/CD
+
+現在はテストコードを厚めに用意していますが、CI/CD の導入は保留にしています。
+自動テストを継続的に回す価値は高い一方で、GitHub Actions を使うのか、CircleCI などチーム標準の別環境を使うのかで構成が変わるため、現時点では決め打ちしていません。
+
+考えられる選択肢:
+
+- GitHub Actions を導入し、push / pull request 時に `manage.py test` を実行する
+- CircleCI など既存のチーム標準 CI に組み込む
+- まずはローカル実行を前提にし、運用方針確定後に CI/CD を導入する
