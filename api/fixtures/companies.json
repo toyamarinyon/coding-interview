@@ -1,0 +1,11 @@
+[
+  {
+    "model": "api.company",
+    "pk": "11111111-1111-1111-1111-111111111111",
+    "fields": {
+      "name": "Test Company",
+      "created_at": "2026-04-18T00:00:00Z",
+      "updated_at": "2026-04-18T00:00:00Z"
+    }
+  }
+]
